@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">Lucky Dice Roller</string>
+    <string name="success">Lucky !</string>
+    <string name="loose">Unlucky !</string>
     <string name="roll">Roll</string>
+    <string name="bot">Bot</string>
+    <string name="you">You</string>
+    <string name="title">Lucky or not ?</string>
+    <string name="your_dice_desc">dice with the face you get</string>
+    <string name="bot_dice_desc">dice with the face the bot get</string>
 </resources>

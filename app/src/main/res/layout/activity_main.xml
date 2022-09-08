@@ -11,32 +11,69 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:textSize="64sp"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Lucky !"/>
+        android:text="@string/title"/>
 
-    <TextView
-        android:id="@+id/lucky_or_not_detail"
+
+    <LinearLayout
+        android:id="@+id/dices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lucky_or_not"
-        tools:text="I get 0"/>
-
-    <TextView
-        android:id="@+id/print_dice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="128sp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="0" />
+        app:layout_constraintTop_toTopOf="parent" >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:text="@string/you"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/print_your_dice"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/dice_1"
+                android:contentDescription="@string/your_dice_desc"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:text="@string/bot"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:id="@+id/print_bot_dice"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/dice_1"
+                android:contentDescription="@string/bot_dice_desc"/>
+        </LinearLayout>
+    </LinearLayout>
 
     <Button
         android:id="@+id/roll_btn"
@@ -45,6 +82,6 @@
         android:text="@string/roll"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/print_dice" />
+        app:layout_constraintTop_toBottomOf="@+id/dices" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
